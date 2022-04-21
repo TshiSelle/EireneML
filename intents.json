@@ -1,0 +1,223 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Eirene",
+        "Hello Eirene",
+        "Hi Eirene",
+        "Greetings",
+        "What's up Eirene",
+        "Top of the morning to you",
+        "Good morning",
+        "good afternoon",
+        "good evening",
+        "hola Eirene",
+        "heyy Eirene",
+        "how's it going Eirene"
+      ],
+      "responses": [
+        "Hellooo",
+        "Hii",
+        "Holaa",
+        "Wasguu",
+        "Good morninggg",
+        "Good eveningg",
+        "Hiyaa"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "goodnight",
+        "goodbye",
+        "adios",
+        "bye",
+        "see you later",
+        "see you",
+        "have a good one",
+        "until next time"
+      ],
+      "responses": [
+        "Goodbye",
+        "Adios",
+        "Wasgu",
+        "So long",
+        "Laterr",
+        "Have a good one"
+      ]
+    },
+    {
+      "tag": "meet",
+      "patterns": [
+        "Who are you?",
+        "who's  this?",
+        "who is this?",
+        "What's your name?",
+        "What is your name?"
+      ]
+    },
+    {
+      "tag": "emotion_anger",
+      "patterns": [
+        "I hate this",
+        "Damn it",
+        "Greetings",
+        "What's up",
+        "Top of the morning to you",
+        "fuckin'm transtelecom",
+        "Working   But it's Fridaaaayyyyy",
+        "I tried to dye my hair and all i got was a blond chunk in the front middle part of my hair. Dang.",
+        "damned hordies",
+        "My stomach is all EXPLODE from the wendys  why is everything that tastes good bad for you?",
+        "i hav a chance to win $10, $100, $1000.  i was given a free can of $ plant..have to wait till the plant grow to know if i won anythin!!?!",
+        "stuck in stupid Jeuno with flag up.  Wish I was in Windy fishing",
+        "are u serious???? you touched his arse? ohmygod u bitch!!! lol aaaaawwwwwww y did u tell me that!!!",
+        "Shout out to my moms for wakin me up so prematurely! Preciate it",
+        "Stupid red hair is too difficult on the upkeep. Re-dyed it a more manageable brown-red. Boo",
+        "had a kickass day full of Seaworld, retarded 15 year old guys, and X-Men Origins. Win day?",
+        "Take that back. I am insulted.",
+        "Told you that when you got rid of the last one. Did you listen",
+        "So, what's so great bout your so called 'wonderful love life'?  For god sake, W-A-T-E-V-A!"
+      ],
+      "responses": [
+        "You seem upset, what's wrong",
+        "Hii",
+        "Holaa",
+        "Wasguu",
+        "Good morninggg",
+        "Good eveningg",
+        "Hiyaa"
+      ]
+    },
+    {
+      "tag": "emotion_aggressive",
+      "patterns": [
+        "If someone throws a stone at you, throw a flower at them but remember to throw flower pot with it",
+        "Anger is like a flame on a candle. The candle thinks that its flame is blazing powerful light. But it is actually the reason for its own meltdown",
+        "I wouldn't have to manage my anger if people could learn to manage their stupidity",
+        "It's practically impossible to look at a penguin and feel angry",
+        "I'm gonna kill",
+        "I am going to kill",
+        "I am going to commit murder",
+        "I'm gonna commit die on someone"
+      ],
+      "responses": [
+        "Ayo Chill wasguu",
+        "Dude relax, take a deap breath... Let us do it",
+        "TAKE A CHILL PILL",
+        "Nafas Nafas",
+        "Roomye won't feel nice",
+        "0_0 wat"
+      ]
+    },
+    {
+      "tag": "isolation",
+      "patterns": [
+        "Don't want to talk about it",
+        "leave me alone",
+        "not now",
+        "go away"
+      ],
+      "responses": [
+        "Okay, I'll be here whenever you need",
+        "Okay, I'm Sorry, you know where to find me when you need me"
+      ]
+    },
+    {
+      "tag": "emotion_boredom",
+      "patterns": [
+        "i'm so tired",
+        "Waiting in line",
+        "why did i agree to work a double shift",
+        "is really, really bored... I guess I will go to bed",
+        "So deep its priecing my soul",
+        "THIS TWITTER SHIT BORES ME, NOW I C Y I HAVEN'T BEEN ON HERE IN A MONTH",
+        "Not actually managed to purchase anything from the ovi store yet. Constant server error on check out",
+        "Friday tubes at work are slow..",
+        "is really ultra bored",
+        "Finishing the video. Fuck me, it's so long",
+        "i think that studying has really started taking its toll..",
+        "I need something t do like hello... Im fucking bored now.  um... yeh...",
+        "I need to go ouuut. I'm so bored."
+      ],
+      "responses": [
+        "If it's important, finish a milestone and go do something else",
+        "Play a minigame !! Just DONT KILL YOURSELF"
+      ]
+    },
+    {
+      "tag": "emotion_worry",
+      "patterns": [
+        "Choked on her retainers",
+        "I HATE CANCER. I HATE IT I HATE IT I HATE IT.",
+        "just picked up her Blackberry from the middle of the street! Both she and it are crushed!",
+        "Why do I have the feeling I should be packing and hitting for SFO around this time of the year? I think I'm missing something...",
+        "So deep its priecing my soul",
+        "THIS TWITTER SHIT BORES ME, NOW I C Y I HAVEN'T BEEN ON HERE IN A MONTH",
+        "why am i so tired?",
+        "fresh prince and sleepy sleeps my nightly routine  gotta go to Dmv early tmrw",
+        "I can't sleep...I keep thinking about the puppy I played with today",
+        "My head hurts so bad I could scream!",
+        "oh men!!!!!!......I really can't see my face........c'mon guys!!!",
+        "why are plane tickets so expensive",
+        "i think the vog is making me sicker than i think. feeling slightly achy."
+      ],
+      "responses": [
+        "Hey It'll be fine, take a breath",
+        "It's okay relax if you feel really anxious take a break",
+        "If you don't feel so good don't forget to keep up with your doctor",
+        "It's okay listen to sme music relax for a bit"
+      ]
+    },
+    {
+      "tag": "emotion_sad",
+      "patterns": [
+        "Funeral ceremony...gloomy friday...",
+        "So sleepy again and it's not even that late. I fail once again.",
+        "dont wanna work 11-830 tomorrow  but i get paid",
+        "I wish she knew what she puts me through..She stole my heart, never gave it back..and occasionally she likes to be like look what I have!",
+        "So deep its priecing my soul",
+        "THIS TWITTER SHIT BORES ME, NOW I C Y I HAVEN'T BEEN ON HERE IN A MONTH",
+        "Allergies suck ducks nuts.",
+        "Is miserable  i feel like im gona cry  sux!",
+        "Last day working for the Uni today, sad times",
+        "I miss my puppy",
+        "but now i have no money for a phone",
+        "I HATE rob zombie movies. &amp; the smell of weed. Vommmm.",
+        "Taylor Swift and Joe Jonas looked really good together. I'm kinda sad they broke up."
+      ],
+      "responses": [
+        "Ayo WE DONT FEEL SAD IN THIS HOUSE. It will be okay. I'm here to chat",
+        "get off your device, grab something to eat and have some alone time enjoy it",
+        "If you don't feel so good don't forget to keep up with your doctor",
+        "It's okay listen to some music relax for a bit I'm here"
+      ]
+    },
+    {
+      "tag": "emotion_happy",
+      "patterns": [
+        "mmm much better day... so far! it's still quite early. last day of #uds",
+        "Need to pack for CALI CALI! Cannot waittt! Thinking a glass of wine is in order to celebrate my weekend vaca. Still work 2morrow, tho.",
+        "omg, the concert was awesome, madrigals gave me chills on almost every piece...brooks also called up alumni, but i didnt get to go",
+        "I wish she knew what she puts me through..She stole my heart, never gave it back..and occasionally she likes to be like look what I have!",
+        "FB is boring   and i wanna sing RIGHT NOW..! *-*",
+        "My little foster kittens are getting big...chubba and Winston are going 2 b missed when they get amazing homes.",
+        "Friday yay!! And a bonus, don't have to drive to Wales tonight.  Athough will miss kitten cuddles and going for a ride",
+        "someone take me to LA  I NEED TO SEE THE LEMON TREE",
+        "ah thats better snow patrol! now to be stuck indoors  still weekend coming up and fresh air excellent hope its sunny!",
+        "I miss the concert Tuesday already. I'd really like a time machine to go see it again... It was so fun...",
+        "BOOYA!! Sup Tweeps!? Happy inFAMOUS day to you all, off to get it very soon. Can't wait to play, need to find some more time though",
+        "The food here looks amazing! Our dessert is Frozen Grand Marnier Souffle, of course we have to eat @ the bar",
+        "just got back from my grandparents suprise 60th anniversary party...it was sooooo much fun!!!"
+      ],
+      "responses": [
+        "WASGUUUUUUUUUU !!!!!",
+        "PRETTY VIBES I LIKE share them !",
+        "COOOL",
+        "That seems AWESOME"
+      ]
+    }
+  ]
+}
+
