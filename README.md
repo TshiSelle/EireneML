@@ -29,22 +29,6 @@ Training data is stored in `intents.json`. Each intent consists of:
 
 - a **tag** representing the intent label,Training
 
-To train the model:
-
-python training.py
-
-
-This script:
-
-processes the training data,
-
-builds the vocabulary and class labels,
-
-trains the neural network,
-
-saves the trained model and preprocessing artifacts.
-- a list of **patterns** used for training,
-- a list of possible **responses**.
 
 Example:
 ```json
