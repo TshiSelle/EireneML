@@ -1,80 +1,125 @@
-import random
 import json
 import pickle
+import random
 import numpy as np
 import nltk
-# nltk.download('punkt')
-# nltk.download('wordnet')
-import random
-nltk.download('omw-1.4')
-
-# Natural language toolkit
 from nltk.stem import WordNetLemmatizer
+from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
+
+
+INTENTS_PATH = "intents.json"
+WORDS_PATH = "words.pkl"
+CLASSES_PATH = "classes.pkl"
+MODEL_PATH = "eirene.h5"
+
+IGNORE_TOKENS = {"?", "!", ".", ","}
+
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('intents.json').read())
 
-words = []
-classes = []
-documents = []
-ignore_letters = ['?', '!', '.', ',']
+def load_intents(path: str) -> dict:
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-for intent in intents['intents']:
-    for pattern in intent['patterns']:
-        word_list = nltk.word_tokenize(pattern)
-        words.extend(word_list)
-        documents.append((word_list, intent['tag']))
-        if intent['tag'] not in classes:
-            classes.append(intent['tag'])
 
-word = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_letters]
-words = sorted(set(word))
+def dump_pickle(obj, path: str) -> None:
+    with open(path, "wb") as f:
+        pickle.dump(obj, f)
 
-classes = sorted(set(classes))
 
-pickle.dump(words, open('words.pkl', 'wb'))
-pickle.dump(classes, open('classes.pkl', 'wb'))
+def normalize_tokens(tokens: list[str]) -> list[str]:
+    return [lemmatizer.lemmatize(t.lower()) for t in tokens if t not in IGNORE_TOKENS]
 
-training = []
-output_empty = [0] * len(classes)
 
-for document in documents:
-    bag = []
-    word_patterns = document[0]
-    word_patterns = [lemmatizer.lemmatize(w.lower()) for w in word_patterns]
+def build_dataset(intents_json: dict) -> tuple[list[str], list[str], list[tuple[list[str], str]]]:
+    words: list[str] = []
+    classes: list[str] = []
+    documents: list[tuple[list[str], str]] = []
 
-    for w in words:
-        bag.append(1 if w in word_patterns else 0)
+    for intent in intents_json.get("intents", []):
+        tag = intent.get("tag")
+        patterns = intent.get("patterns", [])
 
-    output_row = list(output_empty)
-    output_row[classes.index(document[1])] = 1
-    training.append([bag, output_row])
+        if not tag or not patterns:
+            continue
 
-random.shuffle(training)
-training = np.array(training, dtype=object)
+        if tag not in classes:
+            classes.append(tag)
 
-train_x = list(training[:, 0])
-train_y = list(training[:, 1])
+        for p in patterns:
+            tokens = nltk.word_tokenize(p)
+            tokens = normalize_tokens(tokens)
+            if not tokens:
+                continue
+            words.extend(tokens)
+            documents.append((tokens, tag))
 
-model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(64, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(len(train_y[0]), activation='softmax'))
+    words = sorted(set(words))
+    classes = sorted(set(classes))
+    return words, classes, documents
 
-try:
-    sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-except TypeError:
-    sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
-hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
+def vectorize(
+    documents: list[tuple[list[str], str]],
+    words: list[str],
+    classes: list[str],
+) -> tuple[np.ndarray, np.ndarray]:
+    word_index = {w: i for i, w in enumerate(words)}
+    class_index = {c: i for i, c in enumerate(classes)}
 
-model.save('eirene.h5')
+    x = np.zeros((len(documents), len(words)), dtype=np.float32)
+    y = np.zeros((len(documents), len(classes)), dtype=np.float32)
+
+    for row, (tokens, tag) in enumerate(documents):
+        for t in set(tokens):
+            idx = word_index.get(t)
+            if idx is not None:
+                x[row, idx] = 1.0
+
+        y[row, class_index[tag]] = 1.0
+
+    return x, y
+
+
+def build_model(input_dim: int, output_dim: int) -> Sequential:
+    model = Sequential()
+    model.add(Dense(128, input_shape=(input_dim,), activation="relu"))
+    model.add(Dropout(0.5))
+    model.add(Dense(64, activation="relu"))
+    model.add(Dropout(0.5))
+    model.add(Dense(output_dim, activation="softmax"))
+
+    try:
+        opt = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+    except TypeError:
+        opt = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+
+    model.compile(
+        loss="categorical_crossentropy",
+        optimizer=opt,
+        metrics=["accuracy"],
+    )
+    return model
+
+
+intents = load_intents(INTENTS_PATH)
+
+words, classes, documents = build_dataset(intents)
+dump_pickle(words, WORDS_PATH)
+dump_pickle(classes, CLASSES_PATH)
+
+x, y = vectorize(documents, words, classes)
+
+idx = list(range(len(x)))
+random.shuffle(idx)
+x = x[idx]
+y = y[idx]
+
+model = build_model(input_dim=x.shape[1], output_dim=y.shape[1])
+model.fit(x, y, epochs=200, batch_size=5, verbose=1)
+model.save(MODEL_PATH)
 
 print("Done")
