@@ -1,6 +1,6 @@
 # EireneML
 
-A lightweight intent-based conversational model built using classical natural language processing and machine learning techniques.
+A supervised natural language processing (NLP) model that classifies user input into predefined emotional intent categories.
 
 ---
 
