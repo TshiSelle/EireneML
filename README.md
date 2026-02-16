@@ -11,6 +11,7 @@ complete machine learning workflow, from text preprocessing and feature engineer
 ---
 
 ## Project Structure
+```text
 EireneML/
 │
 ├── intents.json # Intent definitions and training data
@@ -20,7 +21,7 @@ EireneML/
 ├── classes.pkl # Serialized intent labels
 ├── eirene.h5 # Trained neural network model
 └── README.md
-
+```
 
 ---
 
