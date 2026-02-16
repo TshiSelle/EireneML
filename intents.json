@@ -65,29 +65,26 @@
         "Greetings",
         "What's up",
         "Top of the morning to you",
-        "fuckin'm transtelecom",
+        "working issues are frustrating",
         "Working   But it's Fridaaaayyyyy",
         "I tried to dye my hair and all i got was a blond chunk in the front middle part of my hair. Dang.",
         "damned hordies",
         "My stomach is all EXPLODE from the wendys  why is everything that tastes good bad for you?",
         "i hav a chance to win $10, $100, $1000.  i was given a free can of $ plant..have to wait till the plant grow to know if i won anythin!!?!",
         "stuck in stupid Jeuno with flag up.  Wish I was in Windy fishing",
-        "are u serious???? you touched his arse? ohmygod u bitch!!! lol aaaaawwwwwww y did u tell me that!!!",
+        "are u serious???? you touched his arse? ohmygod u !!! lol aaaaawwwwwww y did u tell me that!!!",
         "Shout out to my moms for wakin me up so prematurely! Preciate it",
         "Stupid red hair is too difficult on the upkeep. Re-dyed it a more manageable brown-red. Boo",
-        "had a kickass day full of Seaworld, retarded 15 year old guys, and X-Men Origins. Win day?",
+        "had a kickass day full of Seaworld, annoying 15 year old guys, and X-Men Origins. Win day?",
         "Take that back. I am insulted.",
         "Told you that when you got rid of the last one. Did you listen",
         "So, what's so great bout your so called 'wonderful love life'?  For god sake, W-A-T-E-V-A!"
       ],
       "responses": [
         "You seem upset, what's wrong",
-        "Hii",
-        "Holaa",
-        "Wasguu",
-        "Good morninggg",
-        "Good eveningg",
-        "Hiyaa"
+        "I'm here if you want to talk",
+        "Take a breath",
+        "I hear you"
       ]
     },
     {
@@ -97,18 +94,15 @@
         "Anger is like a flame on a candle. The candle thinks that its flame is blazing powerful light. But it is actually the reason for its own meltdown",
         "I wouldn't have to manage my anger if people could learn to manage their stupidity",
         "It's practically impossible to look at a penguin and feel angry",
-        "I'm gonna kill",
-        "I am going to kill",
-        "I am going to commit murder",
-        "I'm gonna commit die on someone"
+        "I feel extremely angry",
+        "I am very angry right now"
       ],
       "responses": [
-        "Ayo Chill wasguu",
-        "Dude relax, take a deap breath... Let us do it",
+        "Ayo chill",
+        "Dude relax, take a deep breath",
         "TAKE A CHILL PILL",
         "Nafas Nafas",
-        "Roomye won't feel nice",
-        "0_0 wat"
+        "Let's slow things down"
       ]
     },
     {
@@ -136,14 +130,14 @@
         "Not actually managed to purchase anything from the ovi store yet. Constant server error on check out",
         "Friday tubes at work are slow..",
         "is really ultra bored",
-        "Finishing the video. Fuck me, it's so long",
+        "Finishing the video, it's so long",
         "i think that studying has really started taking its toll..",
-        "I need something t do like hello... Im fucking bored now.  um... yeh...",
+        "I need something t do like hello... Im really bored now.  um... yeh...",
         "I need to go ouuut. I'm so bored."
       ],
       "responses": [
         "If it's important, finish a milestone and go do something else",
-        "Play a minigame !! Just DONT KILL YOURSELF"
+        "Maybe take a short break"
       ]
     },
     {
@@ -179,16 +173,16 @@
         "I wish she knew what she puts me through..She stole my heart, never gave it back..and occasionally she likes to be like look what I have!",
         "So deep its priecing my soul",
         "THIS TWITTER SHIT BORES ME, NOW I C Y I HAVEN'T BEEN ON HERE IN A MONTH",
-        "Allergies suck ducks nuts.",
-        "Is miserable  i feel like im gona cry  sux!",
+        "Allergies suck.",
+        "Is miserable  i feel like im gona cry",
         "Last day working for the Uni today, sad times",
         "I miss my puppy",
         "but now i have no money for a phone",
-        "I HATE rob zombie movies. &amp; the smell of weed. Vommmm.",
+        "I dislike the smell of weed.",
         "Taylor Swift and Joe Jonas looked really good together. I'm kinda sad they broke up."
       ],
       "responses": [
-        "Ayo WE DONT FEEL SAD IN THIS HOUSE. It will be okay. I'm here to chat",
+        "It will be okay. I'm here to chat",
         "get off your device, grab something to eat and have some alone time enjoy it",
         "If you don't feel so good don't forget to keep up with your doctor",
         "It's okay listen to some music relax for a bit I'm here"
@@ -198,18 +192,17 @@
       "tag": "emotion_happy",
       "patterns": [
         "mmm much better day... so far! it's still quite early. last day of #uds",
-        "Need to pack for CALI CALI! Cannot waittt! Thinking a glass of wine is in order to celebrate my weekend vaca. Still work 2morrow, tho.",
-        "omg, the concert was awesome, madrigals gave me chills on almost every piece...brooks also called up alumni, but i didnt get to go",
-        "I wish she knew what she puts me through..She stole my heart, never gave it back..and occasionally she likes to be like look what I have!",
+        "Need to pack for CALI CALI! Cannot waittt!",
+        "omg, the concert was awesome",
         "FB is boring   and i wanna sing RIGHT NOW..! *-*",
-        "My little foster kittens are getting big...chubba and Winston are going 2 b missed when they get amazing homes.",
-        "Friday yay!! And a bonus, don't have to drive to Wales tonight.  Athough will miss kitten cuddles and going for a ride",
+        "My little foster kittens are getting big",
+        "Friday yay!!",
         "someone take me to LA  I NEED TO SEE THE LEMON TREE",
-        "ah thats better snow patrol! now to be stuck indoors  still weekend coming up and fresh air excellent hope its sunny!",
-        "I miss the concert Tuesday already. I'd really like a time machine to go see it again... It was so fun...",
-        "BOOYA!! Sup Tweeps!? Happy inFAMOUS day to you all, off to get it very soon. Can't wait to play, need to find some more time though",
-        "The food here looks amazing! Our dessert is Frozen Grand Marnier Souffle, of course we have to eat @ the bar",
-        "just got back from my grandparents suprise 60th anniversary party...it was sooooo much fun!!!"
+        "ah thats better snow patrol!",
+        "I miss the concert Tuesday already",
+        "BOOYA!! Sup Tweeps!?",
+        "The food here looks amazing!",
+        "just got back from my grandparents suprise 60th anniversary party"
       ],
       "responses": [
         "WASGUUUUUUUUUU !!!!!",
@@ -220,4 +213,3 @@
     }
   ]
 }
-
