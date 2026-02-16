@@ -10,6 +10,18 @@ complete machine learning workflow, from text preprocessing and feature engineer
 
 ---
 
+### Requirements
+Install dependencies using:
+
+pip install -r requirements.txt
+
+NLTK resources required:
+- punkt
+- wordnet
+- omw-1.4
+
+---
+
 ## Project Structure
 ```text
 EireneML/
